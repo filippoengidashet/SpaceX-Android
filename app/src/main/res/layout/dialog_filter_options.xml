@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year:"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_years"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner_years" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_years"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:drawSelectorOnTop="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch Succeeded:"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_succeeded"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/switch_succeeded" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_succeeded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:textOff="@string/text_no"
+        android:textOn="@string/text_yes"
+        android:thumb="@drawable/selector_switch_thumb"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_years"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_years"
+        app:showText="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort Order:"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner_sort_order"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/spinner_sort_order" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_sort_order"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:drawSelectorOnTop="true"
+        android:entries="@array/sort_order"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_years"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/switch_succeeded" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
