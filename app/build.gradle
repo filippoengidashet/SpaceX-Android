@@ -96,6 +96,8 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.12.0'
 
     //Code Linting
+    //  ./gradlew ktlintCheck
+    //  ./gradlew detekt check
     implementation('io.gitlab.arturbosch.detekt:detekt-formatting:1.18.1') {
         exclude group: 'com.pinterest.ktlint', module: ''
     }
